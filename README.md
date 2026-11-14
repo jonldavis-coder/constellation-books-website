@@ -2,9 +2,9 @@
 
 Author website for the New Constellation trilogy by Jonathan Lee Davis.
 
-Live site: https://jonldavis-coder.github.io/constellation-books-website/
+Live site: https://jonathanleedavis.com/
 
-The site is static HTML published from the `main` branch, at the repository root, on GitHub Pages. There is no custom domain and no `CNAME` file. `.nojekyll` is present so GitHub Pages will not run Jekyll.
+The site is static HTML published from the `main` branch, at the repository root, on GitHub Pages. The custom domain is `jonathanleedavis.com`, set with a `CNAME` file. `.nojekyll` is present so GitHub Pages will not run Jekyll.
 
 ## Local preview
 
