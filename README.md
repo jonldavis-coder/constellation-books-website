@@ -18,8 +18,10 @@ Open http://127.0.0.1:8080/
 
 ## Pages
 
-- Home, with the series and all three books
+- Home, with a New Constellation hero, the trilogy, an about teaser, and requests
 - One page for each book, with both covers and the back-cover description
+- Book Clubs
+- Students
 - About the Author
 - Teacher & Professor Resources
 - Meet the Author
@@ -28,6 +30,15 @@ Open http://127.0.0.1:8080/
 - HTML sitemap at `sitemap.html`
 - XML sitemap at `sitemap.xml` and `robots.txt`
 - `404.html`
+
+## Adding a book later
+
+The trilogy is listed in `assets/data/books.json`. To add a book without a redesign:
+
+1. Add an object to that list.
+2. Add a page at `books/<slug>/index.html`, using an existing book page as the template.
+3. Add a card with the same `article.book-card` markup to the grids on the home page, Book Clubs, and Students.
+4. Add the book to `sitemap.xml`, `sitemap.html`, and `assets/js/links-config.js`.
 
 ## Amazon links
 
@@ -52,7 +63,7 @@ Downloadable teacher guides are labeled “coming soon”.
 
 ## Cover images
 
-Original JPG files are in `assets/images/originals/`. The pages use the optimized copies in `assets/images/covers/`. Open Graph images made from the covers are in `assets/images/og/`.
+Original JPG files are in `assets/images/originals/`. The pages use the optimized copies in `assets/images/covers/`, including 400- and 800-pixel JPEG and WebP versions for faster loading. Open Graph images made from the covers are in `assets/images/og/`.
 
 The front cover of *The Last Constellation* is only **864×1152** pixels (`assets/images/originals/the-last-constellation-front.jpg` and the web copy beside it). The other covers are 1600×2400. On the book page that front cover sits in a column no wider than 26rem (416px). The enlarge view does not scale any cover past its natural pixel width, so this low-resolution file is not stretched on screen. A higher-resolution front cover is needed before that cover can be shown larger.
 

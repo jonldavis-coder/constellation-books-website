@@ -2,18 +2,26 @@
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
   if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
+    function setOpen(open) {
+      nav.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       var label = toggle.querySelector(".nav-toggle-label");
       if (label) label.textContent = open ? "Close" : "Menu";
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(!nav.classList.contains("is-open"));
     });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setOpen(false);
+      });
+    });
+
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && nav.classList.contains("is-open")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        var label = toggle.querySelector(".nav-toggle-label");
-        if (label) label.textContent = "Menu";
+        setOpen(false);
         toggle.focus();
       }
     });
