@@ -67,8 +67,8 @@
   }
 
   if (mount && (inOk || virtualOk)) {
-    if (inOk) appendWidget(inPerson, "In-person author visit");
-    if (virtualOk) appendWidget(virtualUrl, "Virtual meet-the-author session");
+    if (inOk) appendWidget(inPerson, "Free in-person author visit");
+    if (virtualOk) appendWidget(virtualUrl, "Free virtual meet-the-author session");
     var script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
@@ -82,8 +82,8 @@
     if (partial && (inOk || virtualOk) && !(inOk && virtualOk)) {
       partial.hidden = false;
       partial.textContent = inOk
-        ? "In-person visits can be booked above. The virtual calendar is not connected yet. Use the form to request a virtual session."
-        : "Virtual sessions can be booked above. The in-person calendar is not connected yet. Use the form to request an in-person visit.";
+        ? "Free in-person visits can be booked above. The virtual calendar is not connected yet. Use the form to request a virtual session."
+        : "Virtual sessions can be booked above. The in-person calendar is not connected yet. Use the form to request a free in-person visit.";
     }
   }
 
@@ -105,8 +105,8 @@
         ? "Virtual meet-the-author session"
         : "In-person author visit";
       var schoolType = field(data, "schoolType");
-      openMail("Meet the Author request — 30-minute interview", [
-        "Request: 30-minute interview",
+      openMail("Free visit with the author — 30-minute interview", [
+        "Request: Free visit with the author — 30-minute interview",
         "Name: " + field(data, "name"),
         "School: " + field(data, "school"),
         "School type: " + schoolType,
