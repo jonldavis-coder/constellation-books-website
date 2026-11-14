@@ -1,18 +1,6 @@
 (function () {
   var config = window.BOOKING_CONFIG || {};
   var email = String(config.email || "").trim();
-  var calendly = config.calendly || {};
-  var inPerson = String(calendly.inPerson || "").trim();
-  var virtualUrl = String(calendly.virtual || "").trim();
-
-  function httpsUrl(value) {
-    if (!value) return false;
-    try {
-      return new URL(value).protocol === "https:";
-    } catch (error) {
-      return false;
-    }
-  }
 
   function placeholderEmail(value) {
     if (!value) return true;
@@ -47,46 +35,6 @@
     note.hidden = !emailIsPlaceholder;
   });
 
-  var inOk = httpsUrl(inPerson);
-  var virtualOk = httpsUrl(virtualUrl);
-  var mount = document.getElementById("calendly-mount");
-
-  function appendWidget(url, label) {
-    var section = document.createElement("section");
-    section.className = "calendly-section";
-    var heading = document.createElement("h2");
-    heading.textContent = label;
-    var widget = document.createElement("div");
-    widget.className = "calendly-inline-widget";
-    widget.setAttribute("data-url", url);
-    widget.style.minWidth = "320px";
-    widget.style.height = "740px";
-    section.appendChild(heading);
-    section.appendChild(widget);
-    mount.appendChild(section);
-  }
-
-  if (mount && (inOk || virtualOk)) {
-    if (inOk) appendWidget(inPerson, "Free in-person author visit");
-    if (virtualOk) appendWidget(virtualUrl, "Free virtual meet-the-author session");
-    var script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
-  var formSection = document.getElementById("visit-request");
-  if (formSection) {
-    formSection.hidden = inOk && virtualOk;
-    var partial = document.getElementById("partial-booking-note");
-    if (partial && (inOk || virtualOk) && !(inOk && virtualOk)) {
-      partial.hidden = false;
-      partial.textContent = inOk
-        ? "Free in-person visits can be booked above. The virtual calendar is not connected yet. Use the form to request a virtual session."
-        : "Virtual sessions can be booked above. The in-person calendar is not connected yet. Use the form to request a free in-person visit.";
-    }
-  }
-
   function openMail(subject, lines) {
     var address = safeEmail || email;
     var href = "mailto:" + address
@@ -95,25 +43,42 @@
     window.location.href = href;
   }
 
+  var visitTypes = {
+    "in-person": "In-person",
+    virtual: "Virtual",
+    "book-club-chat": "Book club chat"
+  };
+
   var visitForm = document.getElementById("visit-form");
   if (visitForm) {
     visitForm.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!visitForm.reportValidity()) return;
       var data = new FormData(visitForm);
-      var format = data.get("format") === "virtual"
-        ? "Virtual meet-the-author session"
-        : "In-person author visit";
-      var schoolType = field(data, "schoolType");
-      openMail("Free visit with the author — 30-minute interview", [
-        "Request: Free visit with the author — 30-minute interview",
+      var visitType = visitTypes[field(data, "visitType")] || field(data, "visitType");
+      var lines = [
+        "Request: Free visit with the author",
         "Name: " + field(data, "name"),
-        "School: " + field(data, "school"),
-        "School type: " + schoolType,
-        "Role: " + field(data, "role"),
-        "Format: " + format,
-        "Preferred dates: " + field(data, "dates")
-      ]);
+        "Email: " + field(data, "email")
+      ];
+      var organization = field(data, "organization");
+      if (organization) lines.push("Organization: " + organization);
+      lines.push("Visit type: " + visitType);
+      lines.push("Preferred date: " + field(data, "preferredDate"));
+      lines.push("Preferred time: " + field(data, "preferredTime"));
+      var secondDate = field(data, "secondDate");
+      var secondTime = field(data, "secondTime");
+      if (secondDate || secondTime) {
+        lines.push("Second-choice date: " + (secondDate || "not given"));
+        lines.push("Second-choice time: " + (secondTime || "not given"));
+      }
+      var message = String(data.get("message") || "").trim();
+      if (message) {
+        lines.push("");
+        lines.push("Message:");
+        lines.push(message);
+      }
+      openMail("Free visit with the author", lines);
       var status = document.getElementById("visit-status");
       if (status) {
         status.textContent = emailIsPlaceholder
