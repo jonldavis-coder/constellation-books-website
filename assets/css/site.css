@@ -519,6 +519,8 @@ button {
 
 input[type="text"],
 input[type="email"],
+input[type="date"],
+input[type="time"],
 select,
 textarea {
   width: 100%;
@@ -542,6 +544,24 @@ fieldset {
   padding: 0;
 }
 
+
+.optional {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.when-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+  max-width: 36rem;
+}
+
+@media (max-width: 800px) {
+  .when-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .form-actions {
   margin-top: 0.5rem;
 }

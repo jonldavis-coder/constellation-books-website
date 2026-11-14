@@ -240,38 +240,8 @@
   </div>
 </article>
 </div>
-      <p>Public schools, private schools, and colleges can request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, as an in-person author visit or a virtual meet-the-author session.</p>
-      <p>Scheduling calendars are connected from <code>assets/js/booking-config.js</code>. Until a Calendly address is added for an event, use the form. It opens an email in your own mail app. This site does not store the request.</p>
-      
-<div id="calendly-mount"></div>
-<p id="partial-booking-note" class="notice" hidden></p>
-<section id="visit-request" aria-labelledby="visit-heading">
-  <h2 id="visit-heading">Request a free visit with the author</h2>
-  <p class="notice" data-email-placeholder-note>The contact email in <code>assets/js/booking-config.js</code> is still a placeholder. The form will open your email app, but the message will not reach Jonathan Lee Davis until that placeholder is replaced.</p>
-  <p>Messages go to: <span data-config-email>The contact email is still a placeholder in the site configuration.</span></p>
-  <noscript><p class="notice">This form needs JavaScript to open your email app. The address is the placeholder in assets/js/booking-config.js.</p></noscript>
-  <form id="visit-form" method="post" action="#">
-    <label><span>Your name</span><input name="name" type="text" autocomplete="name" required maxlength="120"></label>
-    <label><span>School</span><input name="school" type="text" autocomplete="organization" required maxlength="160"></label>
-    <label><span>School type</span>
-      <select name="schoolType" required>
-        <option value="" selected>Choose one</option>
-        <option>Public school</option>
-        <option>Private school</option>
-        <option>College</option>
-      </select>
-    </label>
-    <label><span>Your role</span><input name="role" type="text" autocomplete="organization-title" required maxlength="120"></label>
-    <fieldset>
-      <legend>In person or virtual</legend>
-      <label class="choice"><input type="radio" name="format" value="in-person" required> Free in-person author visit</label>
-      <label class="choice"><input type="radio" name="format" value="virtual"> Free virtual meet-the-author session</label>
-    </fieldset>
-    <label><span>Preferred dates</span><textarea name="dates" required maxlength="500"></textarea></label>
-    <div class="form-actions"><button type="submit" class="button">Request a free visit by email</button></div>
-    <p id="visit-status" class="status" role="status"></p>
-  </form>
-</section>
+      <p>Public schools, private schools, and colleges can request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, in person, virtual, or as a book club chat.</p>
+      <div class="actions"><a class="button" href="/meet/#visit-request">Request a free visit</a></div>
 
     </div>
   </main>
@@ -283,6 +253,6 @@
       <p>Fiction by Jonathan Lee Davis. Copyright 2026.</p>
     </div>
   </footer>
-  <script src="/assets/js/booking-config.js" defer></script><script src="/assets/js/booking.js" defer></script><script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

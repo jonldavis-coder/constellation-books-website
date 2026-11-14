@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet the Author · Jonathan Lee Davis</title>
-  <meta name="description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, as an in-person author visit or a virtual meet-the-author session. Public schools, private schools, and colleges can ask.">
+  <meta name="description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, in person, virtual, or as a book club chat. Public schools, private schools, and colleges can ask.">
   <meta name="author" content="Jonathan Lee Davis">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://jonathanleedavis.com/meet/">
   <meta name="theme-color" content="#070b16">
   <meta property="og:site_name" content="Jonathan Lee Davis">
   <meta property="og:title" content="Meet the Author · Jonathan Lee Davis">
-  <meta property="og:description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, as an in-person author visit or a virtual meet-the-author session. Public schools, private schools, and colleges can ask.">
+  <meta property="og:description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, in person, virtual, or as a book club chat. Public schools, private schools, and colleges can ask.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jonathanleedavis.com/meet/">
   <meta property="og:image" content="https://jonathanleedavis.com/assets/images/og/home.jpg">
@@ -21,7 +21,7 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Meet the Author · Jonathan Lee Davis">
-  <meta name="twitter:description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, as an in-person author visit or a virtual meet-the-author session. Public schools, private schools, and colleges can ask.">
+  <meta name="twitter:description" content="Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, in person, virtual, or as a book club chat. Public schools, private schools, and colleges can ask.">
   <meta name="twitter:image" content="https://jonathanleedavis.com/assets/images/og/home.jpg">
   <meta name="twitter:image:alt" content="Front covers of New Constellation, Circle of Stars, and The Last Constellation by Jonathan Lee Davis">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -126,36 +126,39 @@
     <div class="wrap">
       <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Meet the Author</li></ol></nav>
       <h1>Meet the Author</h1>
-      <p>Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, as an in-person author visit or a virtual meet-the-author session. Public schools, private schools, and colleges can ask.</p>
-      <p>Scheduling calendars are connected from <code>assets/js/booking-config.js</code>. Until a Calendly address is added for an event, use the form. It opens an email in your own mail app. This site does not store the request.</p>
+      <p>Request a free visit with the author: a 30-minute interview with Jonathan Lee Davis, in person, virtual, or as a book club chat. Public schools, private schools, and colleges can ask.</p>
+      <p>Use the form to request a free visit. It opens an email in your own mail app. This site does not store the request.</p>
       <p>See also <a href="/book-clubs/">Book Clubs</a>, <a href="/students/">Students</a>, and <a href="/teachers/">Teacher &amp; Professor Resources</a>.</p>
       
-<div id="calendly-mount"></div>
-<p id="partial-booking-note" class="notice" hidden></p>
+
 <section id="visit-request" aria-labelledby="visit-heading">
   <h2 id="visit-heading">Request a free visit with the author</h2>
-  <p class="notice" data-email-placeholder-note>The contact email in <code>assets/js/booking-config.js</code> is still a placeholder. The form will open your email app, but the message will not reach Jonathan Lee Davis until that placeholder is replaced.</p>
+  <p class="notice" data-email-placeholder-note>The contact email is still a placeholder in the site configuration. The form will open your email app, but the message will not reach Jonathan Lee Davis until that placeholder is replaced.</p>
   <p>Messages go to: <span data-config-email>The contact email is still a placeholder in the site configuration.</span></p>
-  <noscript><p class="notice">This form needs JavaScript to open your email app. The address is the placeholder in assets/js/booking-config.js.</p></noscript>
+  <noscript><p class="notice">This form needs JavaScript to open your email app. The address is the placeholder in the site configuration.</p></noscript>
   <form id="visit-form" method="post" action="#">
-    <label><span>Your name</span><input name="name" type="text" autocomplete="name" required maxlength="120"></label>
-    <label><span>School</span><input name="school" type="text" autocomplete="organization" required maxlength="160"></label>
-    <label><span>School type</span>
-      <select name="schoolType" required>
-        <option value="" selected>Choose one</option>
-        <option>Public school</option>
-        <option>Private school</option>
-        <option>College</option>
-      </select>
-    </label>
-    <label><span>Your role</span><input name="role" type="text" autocomplete="organization-title" required maxlength="120"></label>
+    <label for="visit-name"><span>Name</span><input id="visit-name" name="name" type="text" autocomplete="name" required maxlength="120"></label>
+    <label for="visit-email"><span>Email</span><input id="visit-email" name="email" type="email" autocomplete="email" required maxlength="160"></label>
+    <label for="visit-org"><span>Organization <span class="optional">(optional)</span></span><input id="visit-org" name="organization" type="text" autocomplete="organization" maxlength="160"></label>
     <fieldset>
-      <legend>In person or virtual</legend>
-      <label class="choice"><input type="radio" name="format" value="in-person" required> Free in-person author visit</label>
-      <label class="choice"><input type="radio" name="format" value="virtual"> Free virtual meet-the-author session</label>
+      <legend>Visit type</legend>
+      <label class="choice"><input type="radio" name="visitType" value="in-person" required> In-person</label>
+      <label class="choice"><input type="radio" name="visitType" value="virtual"> Virtual</label>
+      <label class="choice"><input type="radio" name="visitType" value="book-club-chat"> Book club chat</label>
     </fieldset>
-    <label><span>Preferred dates</span><textarea name="dates" required maxlength="500"></textarea></label>
-    <div class="form-actions"><button type="submit" class="button">Request a free visit by email</button></div>
+    <div class="when-grid">
+      <label for="visit-date"><span>Preferred date</span><input id="visit-date" name="preferredDate" type="date" required></label>
+      <label for="visit-time"><span>Preferred time</span><input id="visit-time" name="preferredTime" type="time" required></label>
+    </div>
+    <fieldset>
+      <legend>Second choice <span class="optional">(optional)</span></legend>
+      <div class="when-grid">
+        <label for="visit-date-2"><span>Second-choice date</span><input id="visit-date-2" name="secondDate" type="date"></label>
+        <label for="visit-time-2"><span>Second-choice time</span><input id="visit-time-2" name="secondTime" type="time"></label>
+      </div>
+    </fieldset>
+    <label for="visit-message"><span>Message <span class="optional">(optional)</span></span><textarea id="visit-message" name="message" maxlength="1500"></textarea></label>
+    <div class="form-actions"><button type="submit" class="button">Request a free visit</button></div>
     <p id="visit-status" class="status" role="status"></p>
   </form>
 </section>
