@@ -1,0 +1,49 @@
+{
+  "series": {
+    "name": "New Constellation trilogy",
+    "url": "https://jonathanleedavis.com/",
+    "author": "Jonathan Lee Davis"
+  },
+  "books": [
+    {
+      "id": "new-constellation",
+      "slug": "new-constellation",
+      "title": "New Constellation",
+      "position": 1,
+      "label": "Book One of the New Constellation Trilogy",
+      "hook": "The American Dream wore thin. Then the letters arrived.",
+      "path": "/books/new-constellation/",
+      "front": "/assets/images/covers/new-constellation-front.jpg",
+      "back": "/assets/images/covers/new-constellation-back.jpg",
+      "isbn": "TBA",
+      "releaseDate": "TBA"
+    },
+    {
+      "id": "circle-of-stars",
+      "slug": "circle-of-stars",
+      "title": "Circle of Stars",
+      "position": 2,
+      "label": "Book Two of New Constellation",
+      "hook": "The line held. Now it has to become a nation.",
+      "path": "/books/circle-of-stars/",
+      "front": "/assets/images/covers/circle-of-stars-front.jpg",
+      "back": "/assets/images/covers/circle-of-stars-back.jpg",
+      "isbn": "TBA",
+      "releaseDate": "TBA"
+    },
+    {
+      "id": "the-last-constellation",
+      "slug": "the-last-constellation",
+      "title": "The Last Constellation",
+      "position": 3,
+      "label": "Book Three of New Constellation",
+      "hook": "The treaty is signed. Now the war comes home.",
+      "path": "/books/the-last-constellation/",
+      "front": "/assets/images/covers/the-last-constellation-front.jpg",
+      "back": "/assets/images/covers/the-last-constellation-back.jpg",
+      "isbn": "TBA",
+      "releaseDate": "TBA"
+    }
+  ],
+  "howToAddABook": "Add an object to this list, create books/<slug>/index.html from an existing book page, add a card with the same book-card markup to the home, Book Clubs, and Students grids, and add the book to sitemap.xml, sitemap.html, and assets/js/links-config.js."
+}
