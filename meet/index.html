@@ -133,9 +133,9 @@
 
 <section id="visit-request" aria-labelledby="visit-heading">
   <h2 id="visit-heading">Request a free visit with the author</h2>
-  <p class="notice" data-email-placeholder-note>The contact email is still a placeholder in the site configuration. The form will open your email app, but the message will not reach Jonathan Lee Davis until that placeholder is replaced.</p>
-  <p>Messages go to: <span data-config-email>The contact email is still a placeholder in the site configuration.</span></p>
-  <noscript><p class="notice">This form needs JavaScript to open your email app. The address is the placeholder in the site configuration.</p></noscript>
+  <p class="notice" data-email-placeholder-note hidden>The contact email is still a placeholder in the site configuration. The form will open your email app, but the message will not reach Jonathan Lee Davis until that placeholder is replaced.</p>
+  <p>Messages go to: <span data-config-email><a href="mailto:jon@verasail.com">jon@verasail.com</a></span></p>
+  <noscript><p class="notice">This form needs JavaScript to open your email app. You can also write to <a href="mailto:jon@verasail.com">jon@verasail.com</a>.</p></noscript>
   <form id="visit-form" method="post" action="#">
     <label for="visit-name"><span>Name</span><input id="visit-name" name="name" type="text" autocomplete="name" required maxlength="120"></label>
     <label for="visit-email"><span>Email</span><input id="visit-email" name="email" type="email" autocomplete="email" required maxlength="160"></label>

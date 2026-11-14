@@ -50,7 +50,7 @@ The request form is on the Meet the Author page. Book Clubs, Students, and Teach
 
 Edit `assets/js/booking-config.js`.
 
-- `email` is the address used by the request forms. The committed value is a clearly marked placeholder. Replace it before sharing the forms. The site does not store messages. The form opens the visitor’s email app.
+- `email` is the address used by the request forms (`jon@verasail.com`). The site does not store messages. The form opens the visitor’s email app.
 
 ## Placeholders
 
