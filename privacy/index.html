@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy · Jonathan Lee Davis</title>
-  <meta name="description" content="Privacy note for the Jonathan Lee Davis author website. This draft describes Google Analytics, forms, hosting, and a placeholder for Amazon.">
+  <meta name="description" content="Privacy draft for the Jonathan Lee Davis author site: Google Analytics, request forms, GitHub Pages, and the Amazon button.">
   <meta name="author" content="Jonathan Lee Davis">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://jonathanleedavis.com/privacy/">
   <meta name="theme-color" content="#070b16">
   <meta property="og:site_name" content="Jonathan Lee Davis">
   <meta property="og:title" content="Privacy · Jonathan Lee Davis">
-  <meta property="og:description" content="Privacy note for the Jonathan Lee Davis author website. This draft describes Google Analytics, forms, hosting, and a placeholder for Amazon.">
+  <meta property="og:description" content="Privacy draft for the Jonathan Lee Davis author site: Google Analytics, request forms, GitHub Pages, and the Amazon button.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jonathanleedavis.com/privacy/">
   <meta property="og:image" content="https://jonathanleedavis.com/assets/images/og/home.jpg">
@@ -21,19 +21,13 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy · Jonathan Lee Davis">
-  <meta name="twitter:description" content="Privacy note for the Jonathan Lee Davis author website. This draft describes Google Analytics, forms, hosting, and a placeholder for Amazon.">
+  <meta name="twitter:description" content="Privacy draft for the Jonathan Lee Davis author site: Google Analytics, request forms, GitHub Pages, and the Amazon button.">
   <meta name="twitter:image" content="https://jonathanleedavis.com/assets/images/og/home.jpg">
   <meta name="twitter:image:alt" content="Front covers of New Constellation, Circle of Stars, and The Last Constellation by Jonathan Lee Davis">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script>document.documentElement.classList.add("js");</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GWSZXPBNY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6GWSZXPBNY');
-</script>
+<script src="/assets/js/analytics.js" defer></script>
 
   <script type="application/ld+json">
 {
@@ -44,30 +38,32 @@
       "@id": "https://jonathanleedavis.com/#website",
       "url": "https://jonathanleedavis.com/",
       "name": "Jonathan Lee Davis",
-      "description": "New Constellation, Circle of Stars, and The Last Constellation: a trilogy of novels by Jonathan Lee Davis.",
+      "alternateName": "New Constellation",
+      "description": "New Constellation, Circle of Stars, and The Last Constellation: novels by Jonathan Lee Davis. Fiction. ISBN and release date: TBA.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://jonathanleedavis.com/about/#author"
       },
       "author": {
         "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "about": {
+        "@id": "https://jonathanleedavis.com/#series"
       }
     },
     {
       "@type": "Person",
       "@id": "https://jonathanleedavis.com/about/#author",
       "name": "Jonathan Lee Davis",
+      "givenName": "Jonathan",
+      "additionalName": "Lee",
+      "familyName": "Davis",
       "url": "https://jonathanleedavis.com/about/",
       "jobTitle": "Author",
+      "email": "jon@verasail.com",
       "birthPlace": {
         "@type": "Place",
-        "name": "Benton, Arkansas",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Benton",
-          "addressRegion": "AR",
-          "addressCountry": "US"
-        }
+        "name": "Benton, Arkansas"
       },
       "alumniOf": [
         {
@@ -76,13 +72,142 @@
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Arkansas Tech University"
+          "name": "University of Central Arkansas"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Arkansas Tech University",
+          "description": "Graduated with a degree in sociology and a minor in military science."
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Harvard University",
+          "description": "Attended graduate school."
         }
       ],
-      "description": "Author of the New Constellation trilogy. Born in Benton, Arkansas. Attended Angie Grant Elementary, Perryville Elementary, Perryville Middle School, Benton Middle School, and Sheridan Junior High, and graduated from Sheridan High School. Attended the University of Central Arkansas, then graduated from Arkansas Tech University with a degree in sociology and a minor in military science. Served as an active-duty officer in the U.S. Army and retired from the Army, then became a technology consultant. Attended graduate school at Harvard University. Has been writing these books for 10 years. The stories weave in his life experiences and the people he knew growing up in Arkansas."
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Author"
+        },
+        {
+          "@type": "Occupation",
+          "name": "U.S. Army officer"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Technology consultant"
+        }
+      ],
+      "knowsLanguage": "en",
+      "description": "Author of the New Constellation trilogy. Born in Benton, Arkansas. Attended several elementary and junior high schools across Arkansas, and graduated from Sheridan High School. Attended the University of Central Arkansas, then graduated from Arkansas Tech University with a degree in sociology and a minor in military science. Served as an active-duty officer in the U.S. Army and retired from the Army, then became a technology consultant. Attended graduate school at Harvard University. Has been writing these books for 10 years. The stories weave in his life experiences and the people he knew growing up in Arkansas. The research behind the books includes interviews, hundreds of hours in libraries and museums, and time with Native American heritage experts."
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://jonathanleedavis.com/#series",
+      "name": "New Constellation trilogy",
+      "url": "https://jonathanleedavis.com/",
+      "description": "Three novels by Jonathan Lee Davis: New Constellation, Circle of Stars, and The Last Constellation. The back covers call the books fiction. ISBN and release date for each book: TBA.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "hasPart": [
+        {
+          "@id": "https://jonathanleedavis.com/books/new-constellation/#book"
+        },
+        {
+          "@id": "https://jonathanleedavis.com/books/circle-of-stars/#book"
+        },
+        {
+          "@id": "https://jonathanleedavis.com/books/the-last-constellation/#book"
+        }
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/new-constellation/#book",
+      "name": "New Constellation",
+      "url": "https://jonathanleedavis.com/books/new-constellation/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 1,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/new-constellation-front-680.jpg",
+        "width": 680,
+        "height": 1020,
+        "caption": "Front cover of New Constellation by Jonathan Lee Davis"
+      },
+      "description": "The American Dream wore thin. Then the letters arrived. When the first American flag flew with thirteen stars, they called the young country a new constellation. Fiction. ISBN and release date: TBA."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/circle-of-stars/#book",
+      "name": "Circle of Stars",
+      "url": "https://jonathanleedavis.com/books/circle-of-stars/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 2,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/circle-of-stars-front-680.jpg",
+        "width": 680,
+        "height": 1020,
+        "caption": "Front cover of Circle of Stars by Jonathan Lee Davis"
+      },
+      "description": "The line held. Now it has to become a nation. The first American flag set its thirteen stars in a circle, so that no one stood above another. Fiction. ISBN and release date: TBA."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/the-last-constellation/#book",
+      "name": "The Last Constellation",
+      "url": "https://jonathanleedavis.com/books/the-last-constellation/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 3,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/the-last-constellation-front-680.jpg",
+        "width": 680,
+        "height": 907,
+        "caption": "Front cover of The Last Constellation by Jonathan Lee Davis"
+      },
+      "description": "The treaty is signed. Now the war comes home. Thirteen white stars on a blue field were once called a new constellation. Fiction. ISBN and release date: TBA."
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://jonathanleedavis.com/privacy/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -97,6 +222,30 @@
           "item": "https://jonathanleedavis.com/privacy/"
         }
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jonathanleedavis.com/privacy/#webpage",
+      "url": "https://jonathanleedavis.com/privacy/",
+      "name": "Privacy",
+      "description": "Privacy draft for the Jonathan Lee Davis author site: Google Analytics, request forms, GitHub Pages, and the Amazon button.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#website"
+      },
+      "about": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "dateModified": "2026-11-15",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/og/home.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "breadcrumb": {
+        "@id": "https://jonathanleedavis.com/privacy/#breadcrumb"
+      }
     }
   ]
 }
@@ -127,9 +276,10 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Privacy</li></ol></nav>
       <h1>Privacy</h1>
       <p>Draft. This privacy note is a working draft for the author site. It is not a finished legal policy.</p>
-      <p>This note describes the author website of Jonathan Lee Davis for the New Constellation trilogy. The site is a set of static pages. It does not ask visitors to create an account.</p>
+      <p>This note describes the author website of <a href="/about/">Jonathan Lee Davis</a> for the New Constellation trilogy: the <a href="/books/new-constellation/">back-cover description of New Constellation</a>, the <a href="/books/circle-of-stars/">back-cover description of Circle of Stars</a>, and the <a href="/books/the-last-constellation/">back-cover description of The Last Constellation</a>. The site is a set of static pages. It does not ask visitors to create an account. Book clubs, students, and teachers each have a page of notes drawn from those descriptions.</p>
       <h2>What this site stores</h2>
-      <p>The pages include Google Analytics. They do not include advertising or a comment system. The site does not set its own cookies for the request forms, and it does not keep a copy of form entries. Google Analytics may collect usage data under <a href="https://policies.google.com/privacy">Google’s privacy policy</a>. When you use a request form, your browser opens an email to the address in the site configuration. That email is sent only if you send it from your mail app.</p>
+      <p>The pages include Google Analytics. The analytics tag loads after the page has rendered, and it still records a page view. The pages do not include advertising or a comment system. The site does not set its own cookies for the request forms, and it does not keep a copy of form entries. Google Analytics may collect usage data under <a href="https://policies.google.com/privacy">Google’s privacy policy</a>. When you use a request form, your browser opens an email to the address in the site configuration. That email is sent only if you send it from your mail app.</p>
+      <p>The visit form on <a href="/meet/">Meet the Author</a> asks for a name, an email, an optional organization, a visit type (in person, virtual, or book club chat), a preferred date and time, an optional second choice, and an optional message. The <a href="/contact/">contact form</a> asks for a name, an email, and a message. Neither form is saved on this website.</p>
       <h2>Amazon</h2>
       <p>Each book page has a button for an Amazon page. While that address is empty, the button is disabled and labeled “Coming soon to Amazon.” The site does not contact Amazon. If a link is added later, choosing it takes you to Amazon, which has its own privacy policy.</p>
       <h2>Hosting</h2>
@@ -137,7 +287,7 @@
       <h2>Contact</h2>
       <p>Questions about this draft can use the <a href="/contact/">contact page</a> or <a href="mailto:jon@verasail.com">jon@verasail.com</a>.</p>
       <h2>Changes</h2>
-      <p>This draft was written on 7 November 2026 and updated on 14 November 2026 to describe Google Analytics and the visit request form. It may be replaced later.</p>
+      <p>This draft was written on 7 November 2026, updated on 14 November 2026 to describe Google Analytics and the visit request form, and updated on 15 November 2026 to note that the analytics tag loads after the page renders. It may be replaced later.</p>
     </div>
   </main>
   <footer class="site-footer">
