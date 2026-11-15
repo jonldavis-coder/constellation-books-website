@@ -27,13 +27,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script>document.documentElement.classList.add("js");</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6GWSZXPBNY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6GWSZXPBNY');
-</script>
+<script src="/assets/js/analytics.js" defer></script>
 
   <script type="application/ld+json">
 {
@@ -44,30 +38,32 @@
       "@id": "https://jonathanleedavis.com/#website",
       "url": "https://jonathanleedavis.com/",
       "name": "Jonathan Lee Davis",
-      "description": "New Constellation, Circle of Stars, and The Last Constellation: a trilogy of novels by Jonathan Lee Davis.",
+      "alternateName": "New Constellation",
+      "description": "New Constellation, Circle of Stars, and The Last Constellation: novels by Jonathan Lee Davis. Fiction. ISBN and release date: TBA.",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://jonathanleedavis.com/about/#author"
       },
       "author": {
         "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "about": {
+        "@id": "https://jonathanleedavis.com/#series"
       }
     },
     {
       "@type": "Person",
       "@id": "https://jonathanleedavis.com/about/#author",
       "name": "Jonathan Lee Davis",
+      "givenName": "Jonathan",
+      "additionalName": "Lee",
+      "familyName": "Davis",
       "url": "https://jonathanleedavis.com/about/",
       "jobTitle": "Author",
+      "email": "jon@verasail.com",
       "birthPlace": {
         "@type": "Place",
-        "name": "Benton, Arkansas",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Benton",
-          "addressRegion": "AR",
-          "addressCountry": "US"
-        }
+        "name": "Benton, Arkansas"
       },
       "alumniOf": [
         {
@@ -76,10 +72,159 @@
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Arkansas Tech University"
+          "name": "University of Central Arkansas"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Arkansas Tech University",
+          "description": "Graduated with a degree in sociology and a minor in military science."
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Harvard University",
+          "description": "Attended graduate school."
         }
       ],
-      "description": "Author of the New Constellation trilogy. Born in Benton, Arkansas. Attended Angie Grant Elementary, Perryville Elementary, Perryville Middle School, Benton Middle School, and Sheridan Junior High, and graduated from Sheridan High School. Attended the University of Central Arkansas, then graduated from Arkansas Tech University with a degree in sociology and a minor in military science. Served as an active-duty officer in the U.S. Army and retired from the Army, then became a technology consultant. Attended graduate school at Harvard University. Has been writing these books for 10 years. The stories weave in his life experiences and the people he knew growing up in Arkansas."
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Author"
+        },
+        {
+          "@type": "Occupation",
+          "name": "U.S. Army officer"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Technology consultant"
+        }
+      ],
+      "knowsLanguage": "en",
+      "description": "Author of the New Constellation trilogy. Born in Benton, Arkansas. Attended several elementary and junior high schools across Arkansas, and graduated from Sheridan High School. Attended the University of Central Arkansas, then graduated from Arkansas Tech University with a degree in sociology and a minor in military science. Served as an active-duty officer in the U.S. Army and retired from the Army, then became a technology consultant. Attended graduate school at Harvard University. Has been writing these books for 10 years. The stories weave in his life experiences and the people he knew growing up in Arkansas. The research behind the books includes interviews, hundreds of hours in libraries and museums, and time with Native American heritage experts."
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://jonathanleedavis.com/#series",
+      "name": "New Constellation trilogy",
+      "url": "https://jonathanleedavis.com/",
+      "description": "Three novels by Jonathan Lee Davis: New Constellation, Circle of Stars, and The Last Constellation. The back covers call the books fiction. ISBN and release date for each book: TBA.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "hasPart": [
+        {
+          "@id": "https://jonathanleedavis.com/books/new-constellation/#book"
+        },
+        {
+          "@id": "https://jonathanleedavis.com/books/circle-of-stars/#book"
+        },
+        {
+          "@id": "https://jonathanleedavis.com/books/the-last-constellation/#book"
+        }
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/new-constellation/#book",
+      "name": "New Constellation",
+      "url": "https://jonathanleedavis.com/books/new-constellation/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 1,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/new-constellation-front-680.jpg",
+        "width": 680,
+        "height": 1020,
+        "caption": "Front cover of New Constellation by Jonathan Lee Davis"
+      },
+      "description": "The American Dream wore thin. Then the letters arrived. When the first American flag flew with thirteen stars, they called the young country a new constellation. Fiction. ISBN and release date: TBA."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/circle-of-stars/#book",
+      "name": "Circle of Stars",
+      "url": "https://jonathanleedavis.com/books/circle-of-stars/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 2,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/circle-of-stars-front-680.jpg",
+        "width": 680,
+        "height": 1020,
+        "caption": "Front cover of Circle of Stars by Jonathan Lee Davis"
+      },
+      "description": "The line held. Now it has to become a nation. The first American flag set its thirteen stars in a circle, so that no one stood above another. Fiction. ISBN and release date: TBA."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jonathanleedavis.com/books/the-last-constellation/#book",
+      "name": "The Last Constellation",
+      "url": "https://jonathanleedavis.com/books/the-last-constellation/",
+      "author": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "genre": "Fiction",
+      "inLanguage": "en",
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://jonathanleedavis.com/about/#author"
+      },
+      "position": 3,
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/covers/the-last-constellation-front-680.jpg",
+        "width": 680,
+        "height": 907,
+        "caption": "Front cover of The Last Constellation by Jonathan Lee Davis"
+      },
+      "description": "The treaty is signed. Now the war comes home. Thirteen white stars on a blue field were once called a new constellation. Fiction. ISBN and release date: TBA."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jonathanleedavis.com/404.html#webpage",
+      "url": "https://jonathanleedavis.com/404.html",
+      "name": "Page not found",
+      "description": "This page was not found on the Jonathan Lee Davis author website.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://jonathanleedavis.com/#website"
+      },
+      "about": {
+        "@id": "https://jonathanleedavis.com/#series"
+      },
+      "dateModified": "2026-11-15",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://jonathanleedavis.com/assets/images/og/home.jpg",
+        "width": 1200,
+        "height": 630
+      }
     }
   ]
 }
@@ -108,20 +253,20 @@
   <main id="content" tabindex="-1">
     <div class="wrap">
       <h1>Page not found</h1>
-      <p>That address is not a page on this site. You can start again from the home page or choose a link below.</p>
+      <p>That address is not a page on this site. You can start again from the home page or choose a link below. The site is the author site for the New Constellation trilogy by Jonathan Lee Davis. The books are fiction. ISBN and release date for each book: TBA.</p>
       <div class="actions">
         <a class="button" href="/">Home</a>
         <a class="button button-secondary" href="/#trilogy">The trilogy</a>
       </div>
       <ul>
-        <li><a href="/books/new-constellation/">New Constellation</a></li>
-        <li><a href="/books/circle-of-stars/">Circle of Stars</a></li>
-        <li><a href="/books/the-last-constellation/">The Last Constellation</a></li>
-        <li><a href="/book-clubs/">Book Clubs</a></li>
-        <li><a href="/students/">Students</a></li>
-        <li><a href="/teachers/">Teacher &amp; Professor Resources</a></li>
-        <li><a href="/about/">About the Author</a></li>
-        <li><a href="/meet/">Meet the Author</a></li>
+        <li><a href="/books/new-constellation/">Back-cover description of New Constellation</a></li>
+        <li><a href="/books/circle-of-stars/">Back-cover description of Circle of Stars</a></li>
+        <li><a href="/books/the-last-constellation/">Back-cover description of The Last Constellation</a></li>
+        <li><a href="/book-clubs/">Book club notes for the trilogy</a></li>
+        <li><a href="/students/">Student notes on the three novels</a></li>
+        <li><a href="/teachers/">Discussion questions for teachers and professors</a></li>
+        <li><a href="/about/">About Jonathan Lee Davis</a></li>
+        <li><a href="/meet/">Request a free visit with the author</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a href="/sitemap.html">Sitemap</a></li>
       </ul>

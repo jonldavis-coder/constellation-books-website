@@ -246,7 +246,11 @@ h1 {
 
 h2 {
   font-size: clamp(1.7rem, 3vw, 2.2rem);
-  margin: 0 0 0.8rem;
+  margin: 2.25rem 0 0.8rem;
+}
+
+.section-head h2 {
+  margin-top: 0;
 }
 
 h3 {
